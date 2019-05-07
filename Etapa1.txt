@@ -1,0 +1,13 @@
+Requerimientos de HW primera etapa (Finca):
+
+-Electrovalvula
+-Sensor de temperatura y humedad
+-Placa Arduino uno
+-Recipiente de vidrio
+-Manguera de agua
+-Contenedor de agua
+
+Requerimientos de SW primera etapa (Finca):
+
+El software se encargara de controlar el riego de la finca teniendo en cuenta las lecturas del sensor de humedad y temperatura, accionara la electrovalvula para que se inicie el riego y evaluara continuamente
+la temperatura hasta que esta se ecuentre en la referencia establecida y detendra el riego pausando la electrovalvula.
