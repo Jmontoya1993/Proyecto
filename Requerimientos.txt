@@ -1,18 +1,17 @@
 Descripcion general del proyecto:
 
-Se trata de un sistema de control de riego y monitoreo de producto, el cual consta de tres etapas que interactuan entre si para llevar un control sobre ciertos parametros establecidos.
+Se trata de un sistema de control de riego y monitoreo de producto, el cual consta de tres etapas que interactuan entre si para llevar un control con ciertos parametros establecidos.
 
 Primera etapa (Finca):
 
-La primera etapa se tratra de un entorno que simula un campo de plantacion y el cual contara con sensiores que monitorean la humedad y la temperatura en su interioro, estos parametros
-seran tomados como entradas en un programa que evaluara si se encuentran dentro del rango requerido y dependiendo de la envaluacion, ajustara la temperatura accionando el sistema de
-riego dentro del entorno, hasta que los paramtros de temperatura y humedad esten dentro del rango solicitado.
+La primera etapa se trataa de un entorno que simula un campo de plantacion y el cual contara con sensores que monitorean la humedad y la temperatura en su interior, estos parametros seran tomados como entradas en un programa que evaluara si se encuentran dentro del rango requerido y dependiendo de la evaluacion, ajustara la temperatura accionando el sistema de riego dentro del entorno, hasta que los parametros de temperatura y humedad esten dentro del rango solicitado. (Para temperatura => 30° y para humedad 60% >=)
 
 Segunda etapa (Transporte):
 
 La segunda etapa se trata del sistema de transporte para un producto de la finca, en esta etapa el sistema de transporte contara con sensores de humedad y temperatura que monitorearan
-las variaciones de los paramteros del producto durante el trasnsporte del producto y almacenaran los datos en un archivo CSV.
+las variaciones de los parametros del producto durante el transporte del producto y almacenaran los datos en un archivo CSV que sera enviado por WIFI desde una rasberrraspberry a un servidor en un computador y graficará esos datos obtenidos (Humedad y temperatura).
 
 Tercera etapa (final):
+Luego de cumplir las dos etapas principales si el producto almacenado estuvo dentro de su temperatura ambiente esta decidirá si el producto es optimo o no para la venta.
 
-Dependiendo de los parametros de evaluacion establecidos, los sensores evaluaran el producto en el momento de llegar a su destino y dira si el producto esta o no en buenas condiciones.
+
