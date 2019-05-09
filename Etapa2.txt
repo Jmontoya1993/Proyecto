@@ -1,8 +1,11 @@
 Requerimientos de HW segunda etapa (Transporte):
+
 -Recipiete contenedor (Maleta)
--Placa Raspberry pi 
+-Placa Raspberry pi
+-Alimentacion para la placa
+-Sensor de temperatura y humedad
 
 Requerimientos de SW Segunda etapa (Transporte):
 
 El software de la segunda etapa se encargara de controlar y transmitir el estado del producto contenido dentro del recipiente, teniendo en cuenta los parametros de temperatura y humedad y evaluara si se encuentra
-en estado optimo o si el producto ha sufrido algun daño durante el proceso de transporte. Los datos de la variacion de los parametros del producto se almacenaran en un archivo CSV.
+en estado optimo o si el producto ha sufrido algun daño durante el proceso de transporte. La informacion tambien sera transmitida en tiempo real por WiFi y la variacion de los parametros del producto se almacenaran en un archivo CSV.
