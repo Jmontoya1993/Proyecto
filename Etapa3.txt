@@ -1,0 +1,8 @@
+Requerimientos de HW:
+
+No requiere.
+
+Requerimientos de Sw:
+
+programa de verificacion de parametros.
+
