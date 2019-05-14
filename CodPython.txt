@@ -1,0 +1,20 @@
+import serial
+import requests
+ser = serial.Serial('COM3',9600,timeout=10)
+while True:
+    try:
+        if ser.inWaiting()>0:
+            humedad = str(ser.readline());
+            temp= str(ser.readline())
+            humedad = humedad.replace("b'", "")
+            humedad =humedad.replace('\\',"")
+            humedad= humedad.replace("rn'","")
+            temp = temp.replace("b'", "")
+            temp = temp.replace('\\', "")
+            temp = temp.replace("rn'", "")
+            date={"hum": humedad, "temp": temp}
+            requests.post('http://192.168.43.123:3000/api/arduino', json=date)
+
+    except KeyboardInterrupt:
+        print('\n... Program Stopped Manually!')
+        break
