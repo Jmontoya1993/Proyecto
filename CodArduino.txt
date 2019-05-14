@@ -1,0 +1,58 @@
+#include <dht.h>
+#include <Wire.h> 
+#include <LiquidCrystal_I2C.h>
+
+
+int lectura = 7;
+LiquidCrystal_I2C lcd(0x3F,16,2);
+dht DHT;
+
+#define DHT11_PIN 7
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(2,OUTPUT);
+  lcd.init();  
+  lcd.backlight();  
+  lcd.clear();
+  Serial.begin(9600);
+  pinMode(lectura, INPUT);
+  
+}
+
+int chk;
+int temperatura, humedad;
+
+
+void loop() {
+ int lectura = digitalRead(lectura);
+ delay(1);
+  // put your main code here, to run repeatedly:
+  chk = DHT.read11(DHT11_PIN);
+  temperatura=DHT.temperature;
+  humedad=DHT.humidity;
+  
+  if(temperatura >= 30){
+      digitalWrite(2,HIGH);       
+  
+  }
+  
+  if(temperatura < 30 && temperatura > 0){
+      digitalWrite(2,LOW);
+  }
+
+  lcd.clear();
+  lcd.setCursor(0,0); 
+  lcd.print("Temp: ");
+  lcd.print(temperatura);
+  lcd.print((char)223);
+  lcd.print("C");
+  lcd.setCursor(0,1);
+  lcd.print("Humedad: ");
+  lcd.print(humedad);
+  lcd.print("%");
+   Serial.println(humedad);
+   Serial.println(temperatura);
+   
+  delay(2000);
+}
